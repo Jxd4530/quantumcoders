@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YogaBoi- Login</title>
+    <style>
+        /* Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Container for login form */
+        .login-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Styling the input fields */
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Styling for reCAPTCHA checkbox */
+        .recaptcha {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .recaptcha input {
+            margin-right: 10px;
+        }
+
+        /* Button Styling */
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: grey;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background-color: #333;
+        }
+
+        /* Error Message Styling */
+        .error-message {
+            color: red;
+            display: none;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .success-message {
+            color: green;
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Success Animation */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .fade-in {
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        /* Red cross sign for error */
+        .error-cross {
+            color: red;
+            font-size: 24px;
+            display: none;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login to YogaBoi</h2>
+
+        <div class="error-message" id="errorMessage">
+            <span class="error-cross" id="errorCross">✖</span><br>
+            Username not found
+        </div>
+
+        <input type="text" id="username" class="input-field" placeholder="Enter Username">
+        <input type="password" id="password" class="input-field" placeholder="Enter Password">
+        
+        <div class="recaptcha">
+            <input type="checkbox" id="recaptcha"> <label for="recaptcha">I am not a robot</label>
+        </div>
+
+        <button class="login-btn" onclick="validateLogin()">Login</button>
+
+        <div class="success-message" id="successMessage">
+            Thank you for joining YogaBoi!
+        </div>
+    </div>
+
+    <script>
+        function validateLogin() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var recaptchaChecked = document.getElementById('recaptcha').checked;
+            var errorMessage = document.getElementById('errorMessage');
+            var errorCross = document.getElementById('errorCross');
+            var successMessage = document.getElementById('successMessage');
+
+            // Reset error message and success message
+            errorMessage.style.display = 'none';
+            errorCross.style.display = 'none';
+            successMessage.style.display = 'none';
+            // Validate credentials
+            if ((password === '9900') && recaptchaChecked) {
+                successMessage.style.display = 'block';
+                successMessage.classList.add('fade-in'); // Trigger animation
+            } else {
+                errorMessage.style.display = 'block';
+                errorCross.style.display = 'inline';
+            }
+        }
+    </script>
+
+</body>
+</html>
