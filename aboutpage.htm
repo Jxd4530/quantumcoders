@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Website Navbar</title>
+    <style>
+        /* Google Fonts - Customize the font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        /* Reset margin and padding for body */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Navbar Container */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 10px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Navbar Logo */
+        .navbar-logo {
+            font-size: 24px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        /* Navbar Links */
+        .navbar-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar-links li {
+            margin-left: 20px;
+            position: relative;
+        }
+
+        .navbar-links li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            padding: 8px 15px;
+            transition: all 0.3s ease;
+        }
+
+        /* Animation on hover */
+        .navbar-links li a:hover {
+            background-color: grey;
+            color: white;
+            border-radius: 4px;
+        }
+
+        /* Dropdown Menu for Workout */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            min-width: 150px;
+            top: 35px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            padding: 10px 20px;
+            display: block;
+            text-align: left;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .dropdown-content a:hover {
+            background-color: grey;
+            color: white;
+        }
+
+        /* Show dropdown on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f0f0;
+            /* Light grey background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #2E8B57;
+            /* Green background */
+            padding: 40px;
+            border-radius: 10px;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        .welcome-text {
+            font-size: 2.5rem;
+            color: #ffffff;
+            /* White text */
+            margin: 0 0 20px;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        .content-header {
+    
+            
+            font-size: 1.5rem;
+            color: #d9d9d9;
+            /* Light grey text */
+            margin: 0 0 15px;
+            text-align: center;
+        }
+
+        .content-body {
+            font-size: 1rem;
+            color: #ffffff;
+            /* White text */
+            line-height: 1.5;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-logo">YogaBoi</div>
+        <ul class="navbar-links">
+            <li><a href="#">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Workout</a>
+                <div class="dropdown-content">
+                    <a href="#">Yoga</a>
+                    <a href="#">Chest Workout</a>
+                    <a href="#">Leg Workout</a>
+                    <a href="#">Additional</a>
+                </div>
+            </li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="loginpage.htm">Login</a></li>
+
+
+        </ul>
+    </div>
+
+    <div class="container">
+        <br>
+        <h1 class="welcome-text"> Key Features</h1>
+        <h2 class="content-header" >Yogaboi  most trusted fitness partner over globe</h2>
+        <p class="content-body">
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+                <title></title>
+       
+                <link rel="stylesheet" href="styles.css">
+            </head>
+            
+
+                
+                <div class="container">
+                <h1>About</h1> </div>
+                   <p>This is an authentic website developed and managed by Quantum Coders</p>
+           
+            </html>
+            
+        </p>
+    </div>
+    <p>
+    <p>
+        <img src="yogaimg.png" alt="yogaperson">
+
+    </p>
+
+
+
+</body>
+
+</html>
