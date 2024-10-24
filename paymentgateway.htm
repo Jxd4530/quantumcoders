@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yogaboi Payment Gateway</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Yogaboi Payment Gateway</h1>
+        <div class="product-info">
+            <h2 id="product-name">Product Name</h2>
+            <p id="product-summary">This is a summary of the product.</p>
+            <p id="total-amount">Total Amount: ₹1000</p>
+        </div>
+        <div class="payment-methods">
+            <h3>Select Payment Method:</h3>
+            <div class="payment-options">
+                <label>
+                    <input type="radio" name="payment-method" value="Credit Card" checked>
+                    Credit Card
+                </label>
+                <label>
+                    <input type="radio" name="payment-method" value="Debit Card">
+                    Debit Card
+                </label>
+                <label>
+                    <input type="radio" name="payment-method" value="UPI">
+                    UPI
+                </label>
+                <label>
+                    <input type="radio" name="payment-method" value="Google Pay">
+                    Google Pay
+                </label>
+            </div>
+        </div>
+        <label>
+            <input type="checkbox" id="payment-checkbox"> I want to do the payment
+        </label>
+        <button id="process-payment" class="btn">Process Payment</button>
+    </div>
+    <div id="loading" class="loading" style="display:none;">Processing...</div>
+    <div id="otp-dialog" class="dialog" style="display:none;">
+        <h3>Enter OTP</h3>
+        <input type="text" id="otp-input" placeholder="Enter OTP" required>
+        <button id="proceed-otp" class="btn">Proceed</button>
+    </div>
+    <div id="success-message" class="success-message" style="display:none;">Payment Done Successfully</div>
+    <script src="payment.js"></script>
+</body>
+</html>
+
+
+
+
