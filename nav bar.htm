@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Website Navbar</title>
+    <style>
+        /* Google Fonts - Customize the font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        /* Reset margin and padding for body */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Navbar Container */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 10px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Navbar Logo */
+        .navbar-logo {
+            font-size: 24px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        /* Navbar Links */
+        .navbar-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar-links li {
+            margin-left: 20px;
+            position: relative;
+        }
+
+        .navbar-links li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            padding: 8px 15px;
+            transition: all 0.3s ease;
+        }
+
+        /* Animation on hover */
+        .navbar-links li a:hover {
+            background-color: grey;
+            color: white;
+            border-radius: 4px;
+        }
+
+        /* Dropdown Menu for Workout */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            min-width: 150px;
+            top: 35px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            padding: 10px 20px;
+            display: block;
+            text-align: left;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .dropdown-content a:hover {
+            background-color: grey;
+            color: white;
+        }
+
+        /* Show dropdown on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-logo">YogaBoy</div>
+        <ul class="navbar-links">
+            <li><a href="#">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Workout</a>
+                <div class="dropdown-content">
+                    <a href="#">Yoga</a>
+                    <a href="#">Chest Workout</a>
+                    <a href="#">Leg Workout</a>
+                    <a href="#">Additional</a>
+                </div>
+            </li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Login</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
